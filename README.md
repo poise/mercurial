@@ -15,6 +15,27 @@ Usage
 Install mercurial to make sure it is available to check out code from
 mercurial repositories.
 
+Resource/Provider
+=================
+
+This cookbook includes LWRPs for managing: hg
+
+hg
+--
+
+# Actions
+- :clone - this will simply issue a clone of the repository at the revision specified (default tip).
+- :sync -  this will issue a clone of the repository if there is nothing at the path specified, otherwise a pull and update will be issued to bring the directory up-to-date.
+
+# Example
+
+	# hg "/home/site/checkouts/www" do
+		repository "ssh://hg@bitbucket.org/niallsco/chef-hg"
+		reference "tip"
+		key "/home/site/.ssh/keyname"
+		action :sync
+	end
+
 License and Author
 ==================
 
