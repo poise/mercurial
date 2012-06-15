@@ -20,21 +20,34 @@ Resource/Provider
 
 This cookbook includes LWRPs for managing: mercurial
 
-hg
---
+mercurial
+---------
 
-# Actions
+### Actions
+
 - :clone - this will simply issue a clone of the repository at the revision specified (default tip).
 - :sync -  this will issue a clone of the repository if there is nothing at the path specified, otherwise a pull and update will be issued to bring the directory up-to-date.
 
-# Example
+### Parameter Attributes
+
+- `path` - **Name attribute** path where the repository is checked
+  out.
+- `repository` - Repository to check out
+- `reference` - Reference in the repository
+- `key` - a private key on disk to use, for private repositories, must
+  already exist.
+- `owner` - local user that the clone is run as
+- `group` - local group that the clone is run as
+- `mode` - permissions of the cloned repository
+
+### Example
 
 	mercurial "/home/site/checkouts/www" do
-		repository "ssh://hg@bitbucket.org/niallsco/chef-hg"
-		reference "tip"
-		key "/home/site/.ssh/keyname"
-		action :sync
-	end
+      repository "ssh://hg@bitbucket.org/niallsco/chef-hg"
+      reference "tip"
+      key "/home/site/.ssh/keyname"
+      action :sync
+    end
 
 License and Author
 ==================
