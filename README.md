@@ -18,7 +18,7 @@ mercurial repositories.
 Resource/Provider
 =================
 
-This cookbook includes LWRPs for managing: hg
+This cookbook includes LWRPs for managing: mercurial
 
 hg
 --
@@ -29,7 +29,7 @@ hg
 
 # Example
 
-	hg "/home/site/checkouts/www" do
+	mercurial "/home/site/checkouts/www" do
 		repository "ssh://hg@bitbucket.org/niallsco/chef-hg"
 		reference "tip"
 		key "/home/site/.ssh/keyname"
