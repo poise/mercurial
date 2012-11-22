@@ -7,6 +7,8 @@ version           "0.8.1"
 
 recipe "mercurial", "Installs mercurial"
 
-%w{ debian ubuntu }.each do |os|
+%w{ debian ubuntu windows }.each do |os|
   supports os
 end
+
+depends           "windows"
