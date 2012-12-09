@@ -12,11 +12,13 @@ action :sync do
   execute "sync update owner #{new_resource.path}" do
     command "chown -R #{new_resource.owner}:#{new_resource.group} #{new_resource.path}"
   end
-  execute "sync update permissions #{new_resource.path}" do
-    command "chmod -R #{new_resource.mode} #{new_resource.path}"
+  if new_resource.mode then
+    execute "sync update permissions #{new_resource.path}" do
+      command "chmod -R #{new_resource.mode} #{new_resource.path}"
+    end
   end
 end
- 
+
 action :clone do
   execute "clone repository #{new_resource.path}" do
     not_if "hg identify #{new_resource.path}"
@@ -28,7 +30,9 @@ action :clone do
   execute "update owner #{new_resource.path}" do
     command "chown -R #{new_resource.owner}:#{new_resource.group} #{new_resource.path}"
   end
-  execute "update permissions #{new_resource.path}" do
-    command "chmod -R #{new_resource.mode} #{new_resource.path}"
+  if new_resource.mode then
+    execute "update permissions #{new_resource.path}" do
+      command "chmod -R #{new_resource.mode} #{new_resource.path}"
+    end
   end
 end
