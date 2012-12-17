@@ -1,3 +1,8 @@
+## v1.1.0:
+
+* [COOK-1945] - cleanup provider
+* [COOK-1946] - windows support
+
 ## v1.0.0:
 
 * [COOK-1373] - README example correction
