@@ -16,6 +16,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-package "mercurial" do
-  action :upgrade
+
+case node['platform']
+when "windows"
+  windows_package "Mercurial" do
+    source node['hg']['windows_url']
+    action :install
+  end
+else
+  package "mercurial" do
+    action :upgrade
+  end
 end
