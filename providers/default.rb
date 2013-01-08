@@ -31,9 +31,10 @@ action :sync do
     command "chown -R #{new_resource.owner}:#{new_resource.group} #{new_resource.path}"
     action :nothing
   end
-  execute "set permissions" do
-    command "chmod -R #{new_resource.mode} #{new_resource.path}"
-    action :nothing
+  if new_resource.mode then
+    execute "set permissions" do
+      command "chmod -R #{new_resource.mode} #{new_resource.path}"
+    end
   end
   if ::File.exist?(hgup_file)
     new_resource.updated_by_last_action(true)
@@ -56,9 +57,10 @@ action :clone do
     command "chown -R #{new_resource.owner}:#{new_resource.group} #{new_resource.path}"
     action :nothing
   end
-  execute "set permission" do
-    command "chmod -R #{new_resource.mode} #{new_resource.path}"
-    action :nothing
+  if new_resource.mode then
+    execute "set permission" do
+      command "chmod -R #{new_resource.mode} #{new_resource.path}"
+    end
   end
   if ::File.exist?(hgup_file)
     new_resource.updated_by_last_action(true)
