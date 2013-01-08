@@ -1,3 +1,8 @@
+## v1.1.2:
+
+* [COOK-2033] - only set recursive permissions if mode is used in
+  mercurial resource
+
 ## v1.1.0:
 
 * [COOK-1945] - cleanup provider
