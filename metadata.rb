@@ -12,3 +12,4 @@ recipe "mercurial", "Installs mercurial"
 end
 
 depends           "windows"
+depends           "python"

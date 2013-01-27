@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: mercurial
-# Recipe:: default
+# Recipe:: pip
 #
 # Copyright 2009, Opscode, Inc.
 #
@@ -17,4 +17,8 @@
 # limitations under the License.
 #
 
-include_recipe "mercurial::#{node['hg']['install_method']}"
+include_recipe "python"
+
+python_pip "mercurial" do
+  action :upgrade
+end

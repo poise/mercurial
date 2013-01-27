@@ -1,3 +1,4 @@
+default['hg']['install_method'] = 'package'
 case node['platform']
 when "windows"
   case  node['kernel']['machine']
