@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: mercurial
-# Recipe:: default
+# Recipe:: package
 #
 # Copyright 2009, Opscode, Inc.
 #
@@ -17,4 +17,14 @@
 # limitations under the License.
 #
 
-include_recipe "mercurial::#{node['hg']['install_method']}"
+case node['platform']
+when "windows"
+  windows_package "Mercurial" do
+    source node['hg']['windows_url']
+    action :install
+  end
+else
+  package "mercurial" do
+    action :upgrade
+  end
+end

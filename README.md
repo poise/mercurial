@@ -6,14 +6,38 @@ Installs mercurial
 Requirements
 ============
 
-A package named "mercurial" must exist in the platform package
-management system.
+Cookbooks
+---------
+
+* python
+
+Attributes
+==========
+
+* `node["hg"]["install_method"]` - method to install mercurial with, you can choose from "package" and "pip". default `package`.
 
 Usage
 =====
 
+default
+-------
+
 Install mercurial to make sure it is available to check out code from
 mercurial repositories.
+method to install mercurial should be changed with `node["hg"]["install_method"]`.
+
+package
+-------
+
+Installs mercurial from packages.
+
+A package named "mercurial" must exist in the platform package
+management system.
+
+pip
+---
+
+Installs mercurial from pip.
 
 Resource/Provider
 =================
