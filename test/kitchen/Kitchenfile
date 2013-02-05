@@ -1,0 +1,5 @@
+cookbook "mercurial" do
+  configuration "default"
+  configuration "pip"
+  configuration "lwrp"
+end
