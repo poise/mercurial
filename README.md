@@ -76,9 +76,16 @@ mercurial
 License and Author
 ==================
 
-Author:: Joshua Timberman <joshua@opscode.com>
+Mercurial LWRP originally by: Niall Napier <niall@napes.co.uk>
 
-Copyright:: 2009, Opscode, Inc
+* https://bitbucket.org/niallsco/chef-cookbooks
+
+Author:: Joshua Timberman <joshua@opscode.com>
+Author:: Mark Roddy <markroddy@gmail.com>
+Author:: Takeshi KOMIYA <i.tkomiya@gmail.com>
+Author:: Guilhem Lettron <guilhem@lettron.fr>
+
+Copyright:: 2009-2013, Opscode, Inc
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
