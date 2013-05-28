@@ -1,6 +1,6 @@
 #
-# Cookbook Name:: mercurial_test
-# Recipe:: pip
+# Cookbook Name:: mercurial
+# Recipe:: test
 #
 # Copyright 2013, Opscode, Inc.
 #
@@ -17,4 +17,10 @@
 # limitations under the License.
 #
 
-include_recipe "mercurial::pip"
+include_recipe "mercurial::default"
+
+mercurial "/tmp/chef-cookbooks" do
+  repository "https://bitbucket.org/niallsco/chef-cookbooks"
+  reference "tip"
+  action :sync
+end
