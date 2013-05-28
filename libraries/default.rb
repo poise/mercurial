@@ -3,7 +3,7 @@ def hgup_file
 end
 
 def hg_connection_command
-  case node['plateform']
+  case node['platform']
   when "windows"
     cmd = ""
   else
