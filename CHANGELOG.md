@@ -1,3 +1,12 @@
+## v2.0.0:
+
+Requires Chef 11 for `use_inline_resources` in LWRP.
+
+### Bug
+
+- [COOK-2346]: LWRP sends notifications to inline exec resources that
+  cannot be found
+
 ## v1.1.4:
 
 * [COOK-2278] - Install mercurial using pip

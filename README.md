@@ -6,6 +6,8 @@ Installs mercurial
 Requirements
 ============
 
+Requires Chef 11 for `use_inline_resources` in LWRP.
+
 Cookbooks
 ---------
 
