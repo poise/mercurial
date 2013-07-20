@@ -13,3 +13,4 @@ end
 
 depends           "windows"
 depends           "python"
+depends           "build-essential"

@@ -18,6 +18,7 @@
 #
 
 include_recipe "python"
+include_recipe "build-essential"
 
 python_pip "mercurial" do
   action :upgrade

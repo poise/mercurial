@@ -12,6 +12,7 @@ Cookbooks
 ---------
 
 * python
+* build-essential
 
 Attributes
 ==========
