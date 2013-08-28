@@ -3,6 +3,11 @@ mercurial Cookbook CHANGELOG
 This file is used to list changes made in each version of the mercurla cookbook.
 
 
+v2.0.2
+------
+### Bug
+- **[COOK-2918](https://tickets.opscode.com/browse/COOK-2918)** - Add `build-essential` dependency
+
 v2.0.0
 ------
 Requires Chef 11 for `use_inline_resources` in LWRP.
