@@ -3,6 +3,11 @@ mercurial Cookbook CHANGELOG
 This file is used to list changes made in each version of the mercurla cookbook.
 
 
+v2.0.4
+------
+[COOK-3794] - Properly manage "update" for mercurial
+
+
 v2.0.2
 ------
 ### Bug
